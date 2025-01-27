@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using IAMAICore.Unity;
 
 public class DummyAI : MonoBehaviour
 {
@@ -8,10 +9,11 @@ public class DummyAI : MonoBehaviour
     public void SimulateAIResponse(string userMessage)
     {
         // Replace this with real AI logic or API call
-        string aiResponse = $"You said: {userMessage}";
+        //string aiResponse = $"You said: {userMessage}";
+        IAMAICoreUnity iAMAICoreUnity = new IAMAICoreUnity();
 
         // Add the AI's response after a delay
-        StartCoroutine(DelayedAIResponse(aiResponse));
+        StartCoroutine(DelayedAIResponse("You said: " + iAMAICoreUnity.Generate(userMessage)));
         //chatController.AddMessage(aiResponse, false);
     }
 
