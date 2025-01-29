@@ -6,11 +6,6 @@ public class DialoguePlayer : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 m_position;
 
-    private void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
